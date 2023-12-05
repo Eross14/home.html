@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <title></title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="logo4.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+          <p>Level Design, Production/ Project Management</p>  
+          <h1>Hi, I'm <span>Ellie </span><br> A Game Design Student from Orlando, FL. </h1>
+        </div>
+    </div>
+</div>
+ <!-- ---------about--------- -->
+<div id="About">
+   <div class="container">
+        </div class="row">
+            <div class="About-col-1"> 
+                 <img src="headshot.jpg" class="logo"
+                 width="700px"
+                 height=auto>
+          </div>
+         <div class="About-col-2"></div>
+        <h1 class="sub-title">About Me</h1>
+        <p>Hi! I'm Ellie, a Digital Media Game Design student at Valencia College in Orlando, FL. I have a goal of working in the gaming industry, with a focus on level design and production/project management.  
+          Here, you can discover some of the school projects and personal-fun-things that I've worked on so far.
+          If you have any questions, feel free to contact me! 
+          </p>
+
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>  
+          <p class="tab-links" onclick="opentab('Education')">Education</p>  
+          <p class="tab-links" onclick="opentab('Projects')">Projects</p> 
+          </div>
+          <div class="tab-contents active-tab" id="Skills">
+            <ul>
+                <li><span>ui/ux</span><br>Designing Web/App interfaces</li>
+                <li><span>Web Development</span><br>Web app Development</li>
+                <li><span>App Development</span><br>Building Android/iOS apps</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="Education">
+            <ul>
+                <li><span>2021-current</span><br>Designing Web/App interfaces</li>
+                <li><span>Web Development</span><br>Web app Development</li>
+                <li><span>App Development</span><br>Building Android/iOS apps</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="Projects">
+            <ul>
+                <li><span></span><br>Designing Web/App interfaces</li>
+                <li><span>Web Development</span><br>Web app Development</li>
+                <li><span>App Development</span><br>Building Android/iOS apps</li>
+            </ul>
+          </div>
+        </div>
+     </div>
+   </div>
+</div>
+<script>
+var tablinks= document.getElementsByClassName("tab-links");
+var tabcontents= document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+   for (tablink of tablinks){
+      tablink.classlist.remove("active-link");
+  }
+  for(tabcontent of tabcontents){
+    tabcontent.classlist.remove("active-tab");
+  }
+  event.currentTarget.classlist.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+
+}
+
+</script>
+</body>
+</html>
